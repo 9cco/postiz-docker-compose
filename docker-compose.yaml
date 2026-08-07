@@ -5,9 +5,9 @@ services:
     restart: always
     environment:
       # === Required Settings
-      MAIN_URL: 'http://${POSTIZ_DOMAIN}:4007'
-      FRONTEND_URL: 'http://${POSTIZ_DOMAIN}:4007'
-      NEXT_PUBLIC_BACKEND_URL: 'http://${POSTIZ_DOMAIN}:4007/api'
+      MAIN_URL: '${POSTIZ_SCHEME}${POSTIZ_DOMAIN}${POSTIZ_PORT}'
+      FRONTEND_URL: '${POSTIZ_SCHEME}${POSTIZ_DOMAIN}${POSTIZ_PORT}'
+      NEXT_PUBLIC_BACKEND_URL: '${POSTIZ_SCHEME}${POSTIZ_DOMAIN}${POSTIZ_PORT}/api'
       JWT_SECRET: 'CYLSdmmYzMr.JXM9U;Uq5iYYXq9,xf4NbqEPk2i'
       DATABASE_URL: 'postgresql://postiz-user:postiz-password@postiz-postgres:5432/postiz-db-local'
       REDIS_URL: 'redis://postiz-redis:6379'
