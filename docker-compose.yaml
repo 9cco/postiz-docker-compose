@@ -6,7 +6,9 @@ services:
     env_file:
       - path: ./env/instagram.env
         required: false
-      - path: /env/cloudflare.env
+      - path: ./env/local-storage.env
+        required: false
+      - path: ./env/cloudflare.env
         required: false
     environment:
       # === Required Settings
@@ -23,9 +25,7 @@ services:
       RUN_CRON: 'true'
 
       # === Storage Settings
-      STORAGE_PROVIDER: 'local'
-      UPLOAD_DIRECTORY: '/uploads'
-      NEXT_PUBLIC_UPLOAD_DIRECTORY: '/uploads'
+      # Use either ./env/cloudflare.env or ./env/local-storage.env
 
       # === Cloudflare (R2) Settings
       # See ./env/cloudflare.env.example and include
