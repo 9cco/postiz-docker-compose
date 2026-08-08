@@ -8,6 +8,8 @@ services:
         required: false
       - path: ./env/facebook.env
         required: false
+      - path: ./env/youtube.env
+        required: false
       - path: ./env/local-storage.env
         required: false
       - path: ./env/cloudflare.env
