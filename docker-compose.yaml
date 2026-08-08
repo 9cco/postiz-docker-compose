@@ -3,6 +3,8 @@ services:
     image: ghcr.io/gitroomhq/postiz-app:v2.21.10
     container_name: postiz
     restart: always
+    env_file:
+      - ./env/instagram.env
     environment:
       # === Required Settings
       MAIN_URL: '${POSTIZ_SCHEME}${POSTIZ_DOMAIN}${POSTIZ_PORT}'
@@ -135,10 +137,8 @@ services:
     image: postgres:17-alpine
     container_name: postiz-postgres
     restart: always
-    environment:
-      POSTGRES_PASSWORD: postiz-password
-      POSTGRES_USER: postiz-user
-      POSTGRES_DB: postiz-db-local
+    env_file:
+      - ./env/postgres.env
     volumes:
       - postgres-volume:/var/lib/postgresql/data
     networks:
