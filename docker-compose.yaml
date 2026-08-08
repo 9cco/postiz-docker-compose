@@ -25,13 +25,8 @@ services:
       NEXT_PUBLIC_UPLOAD_DIRECTORY: '/uploads'
 
       # === Cloudflare (R2) Settings
-      # STORAGE_PROVIDER: 'cloudflare'
-      # CLOUDFLARE_ACCOUNT_ID: 'your-account-id'
-      # CLOUDFLARE_ACCESS_KEY: 'your-access-key'
-      # CLOUDFLARE_SECRET_ACCESS_KEY: 'your-secret-access-key'
-      # CLOUDFLARE_BUCKETNAME: 'your-bucket-name'
-      # CLOUDFLARE_BUCKET_URL: 'https://your-bucket-url.r2.cloudflarestorage.com/'
-      # CLOUDFLARE_REGION: 'auto'
+      # See ./env/cloudflare.env.example and include
+      # ./env/cloudflare.env in the env_file: field
 
       # === Social Media API Settings
       # See ./env/<sevice>.env.example
