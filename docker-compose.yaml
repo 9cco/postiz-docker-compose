@@ -4,7 +4,10 @@ services:
     container_name: postiz
     restart: always
     env_file:
-      - ./env/instagram.env
+      - path: ./env/instagram.env
+        required: false
+      - path: /env/cloudflare.env
+        required: false
     environment:
       # === Required Settings
       MAIN_URL: '${POSTIZ_SCHEME}${POSTIZ_DOMAIN}${POSTIZ_PORT}'
